@@ -5,18 +5,14 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/api/hello', (req, res) => {
-  const count = 5;
-
+app.get('/api/apitest', (req, res) => {
   // Generate some passwords
-  const passwords = Array.from(Array(count).keys()).map(i =>
-    'Hello'
-  )
+  const testString = 'Api call test'
 
   // Return them as json
-  res.json(passwords);
+  res.json(testString);
 
-  console.log(`Sent ${count} Hellos`);
+  console.log(`Api call successful`);
 });
 
 app.get('*', (req, res) => {
@@ -26,4 +22,4 @@ app.get('*', (req, res) => {
 const port = process.env.PORT || 5000;
 app.listen(port);
 
-console.log(`Hello generator listening on ${port}`);
+console.log(`Stream41 listening on ${port}`);
