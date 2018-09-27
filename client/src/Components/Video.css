@@ -1,0 +1,15 @@
+.video {
+  margin: 2%;
+}
+
+.videoImage {
+  width: 200px;
+  height: 150px;
+}
+
+.videoDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
